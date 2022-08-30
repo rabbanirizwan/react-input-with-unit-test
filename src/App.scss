@@ -1,0 +1,1066 @@
+:root{
+  --pb: #F4F5F6;
+  --hc: #2B3F50;
+  --vc: #ABB3B9;
+  --sc: #27B99A;
+}
+@font-face {
+  font-family: "SF Pro Display Bold";
+  src: url(../public/font/FontsFree-Net-SFProDisplay-Bold.ttf);
+}
+
+@font-face {
+  font-family: "SF Pro Display Semi Bold";
+  src: url(../public/font/FontsFree-Net-SFProDisplay-Semibold.ttf);
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url(../public/font/FontsFree-Net-SFProDisplay-Regular.ttf);
+}
+
+$primaryColor1: #2B3F50;
+$primaryColor2: #27B99A;
+$primaryColor3: #F4F5F6;
+
+$neutralColor1: #556573;
+$neutralColor2: #808C96;
+$neutralColor3: #ABB3B9;
+$neutralColor4: #D3D8DB;
+$neutralColor5: #F4F5F6;
+
+$secondaryColor1: #597EF7;
+$secondaryColor2: #85A5FF;
+$secondaryColor3: #52C41A;
+$secondaryColor4: #FAAD14;
+$secondaryColor5: #FFF58F;
+$secondaryColor6: #FF4D4F;
+$secondaryColor7: #FF7875;
+
+@mixin button($height: 62px,$border-radius: 10px){
+  height: $height;
+  border-radius: $border-radius;
+}
+
+@mixin input($height: 60px,$border-radius: 10px,$font-size: 17px){
+  height: $height;
+  border-radius: $border-radius;
+  font-size: $font-size;
+  width: 100%;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "SF Pro Display",sans-serif;
+}
+
+label{
+  font-family: "SF Pro Display Semi Bold",sans-serif;
+  font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "SF Pro Display Bold", sans-serif;
+  color: var(--hc);
+  font-weight: 700;
+}
+
+.justify-content-end{
+  justify-content: flex-end;
+}
+.justify-content-center{
+  justify-content: center;
+}
+.justify-content-between{
+  justify-content: space-between;
+}
+.align-items-center{
+  align-items: center;
+}
+
+.neutral-btn-5{
+  background-color: $neutralColor5;
+  border-radius: 6px;
+  border: none;
+}
+
+.img-fluid{
+  width: 100%;
+  height: auto;
+}
+
+img{
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+
+h1{
+  font-size: 30px;
+}
+h2{
+  font-size: 28px;
+}
+h3{
+  font-size: 24px;
+}
+h4{
+  font-size: 20px;
+}
+h5{
+  font-size: 18px;
+}
+h6{
+  font-size: 16px;
+}
+
+p{
+  font-size: 16px;
+  color: var(--hc);
+}
+span{
+  font-size: 14px;
+  color: var(--hc);
+}
+small{
+  font-size: 12px;
+  color: var(--hc);
+}
+
+.app-container{
+  max-width: 428px;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--pb);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+span.ant-input-affix-wrapper,
+span.ant-input-affix-wrapper input,
+.ant-card,
+.browse-jobs .ant-btn,
+.jobs-nearby .ant-btn {
+  background-color: var(--pb)!important;
+}
+span.ant-input-affix-wrapper{
+  border-radius: 12px;
+}
+.welcome p>span,
+.ant-card-body p:last-child {
+  color: var(--sc);
+}
+.welcome{
+  margin-top: 24px;
+}
+
+.brand span {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.Home {
+  .browse-jobs,
+  .jobs-nearby {
+    .ant-btn{
+      border-radius: 50px;
+      margin-right: 8px;
+      @media (max-width: 395px){
+        margin-right: 6px;
+      }
+    }
+  }
+  .browse-jobs{
+    .ant-btn{
+      margin-top: 8px;
+    }
+  }
+  .ant-col-6.ant-col-offset-4,
+  .ant-col-6.ant-col-offset-8{
+    a{
+      color: #ABB3B9;
+      font-size: 18px;
+    }
+  }
+  .projects-recommend{
+    .ant-card{
+      .ant-card-body{
+        h6{
+          margin-bottom: 0;
+        }
+        p{
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+      }
+      .ant-card-extra{
+        padding: 12px 0;
+      }
+    }
+  }
+  
+}
+.job-lists{
+  .job-list{
+    .ant-col{
+      .location{
+        padding-left: 4px;
+      }
+      h6{
+        margin-bottom: 0;
+      }
+      p{
+        font-size: 14px;
+        svg{
+          fill: $primaryColor2;
+        }
+      }
+      .ant-btn{
+        border-radius: 50px;
+        margin-right: 8px;
+        @media (max-width: 395px){
+          margin-right: 6px;
+        }
+        span{
+          font-size: 12px;
+          @media (max-width: 395px){
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+} 
+
+.Search-Jobs{
+  padding-bottom: 110px;
+  .search-section{
+    margin-top: 16px;
+  }
+  .filter-options{
+    flex-wrap: nowrap;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    overflow-x: auto;
+    .ant-col{
+      margin-right: 8px;
+    }
+    .ant-btn{
+      @include button($height: 44px, $border-radius: 10px);
+      width: 50px;
+      img{
+        width: 23px;
+      }
+    }
+  }
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector{
+    height: auto;
+    padding: 6px 12px;
+    margin-top: 0;
+    @include button($height: 44px, $border-radius: 10px);
+   
+    span{
+      font-size: 16px;
+    }
+  }
+  
+}
+.Job-Details{
+  padding-bottom: 110px;
+  .ant-tabs > .ant-tabs-nav .ant-tabs-nav-list{
+    width: 100%;
+    padding: 8px;
+    background-color: $neutralColor5;
+    border-radius: 15px;
+    .ant-tabs-tab{
+      margin: 0;
+      width: 50%;
+      justify-content: center;
+      .ant-tabs-tab-btn{
+        color: $neutralColor3;
+        font-size: 14px;
+      }
+    }
+    .ant-tabs-tab.ant-tabs-tab-active{
+      background-color: #fff;
+      border-radius: 11px;
+      .ant-tabs-tab-btn{
+        color: $primaryColor1;
+      }
+    }
+  }
+  .ant-tabs-top > .ant-tabs-nav .ant-tabs-ink-bar{
+    display: none;
+  }
+  .job-icon{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    img{
+      width: 70px;
+    }
+  }
+  .job-list{
+    
+    .ant-btn{
+      @include button($height: 44px, $border-radius: 22px);
+      margin-right: 6px;
+      @media (max-width: 400px){
+        span{
+          font-size: 11px;
+        }
+        img{
+          width: 14px;
+        }
+      }
+      img{
+        padding-right: 3px;
+      }
+    }
+    h4{
+      margin-bottom: 0;
+    }
+    
+  }
+  .ant-tabs{
+    margin-top: 30px;
+  }
+}
+
+.Post-Job{
+  padding-bottom: 100px;
+  span.ant-input-affix-wrapper,
+  span.ant-input-affix-wrapper input{
+    background-color: #fff!important;
+    font-size: 17px;
+  }
+  .ant-input-prefix {
+    svg{
+      fill: $neutralColor3;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+.apply-post{
+  margin-top: 16px;
+  margin-bottom: 16px;
+  .ant-col-20{
+    padding-right: 8px;
+    .ant-btn{
+      height: 62px;
+      border-radius: 10px;
+      background-color: $primaryColor1;
+      
+      span{
+        font-size: 18px;
+        color: #fff;
+      }
+    }
+  }
+  .ant-col-4{
+    .ant-btn{
+      height: 62px;
+      border-radius: 10px;
+      background-color: $neutralColor5;
+      border: none;
+    }
+  }
+}
+
+.Login{
+  .forget-password{
+    a{
+      color: $primaryColor1;
+    }
+  }
+  .login-buttons{
+    .ant-btn{
+      position: relative;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      @include button;
+      img{
+        max-width: 26px;
+        height: 26px;
+        position: absolute;
+        left: 20px;
+      }
+      span{
+        font-size: 16px;
+        color: #fff;
+      }
+    }
+    .login{
+      font-family: "SF Pro Display Semi Bold";
+      background-color: $primaryColor1;
+      border-color: $primaryColor1;
+      span{
+        font-size: 18px;
+      }
+    }
+    .fb-login{
+      background-color: #1877F2;
+      border-color: #1877F2;
+    }
+    .twitter-login{
+      background-color: #1DA1F2;
+      border-color: #1DA1F2;
+    }
+    .google-login{
+      background-color: #EFF3F5;
+      border-color: #EFF3F5;
+      span{
+        color: #0C010C;
+      }
+    }
+  
+    .divider {
+      position: relative;
+      span {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        width: 34px;
+        text-align: center;
+      }
+    }  
+  }
+  .sign-up{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    span{
+      font-size: 18px;
+    }
+    a{
+      color: #000;
+      font-size: 18px;
+    }
+  }
+}
+
+.Login,.Sign-Up,.Experience,.Qualifications{
+  .brand{
+    margin-bottom: 16px;
+  }
+  h1{
+    margin-bottom: 0;
+  }
+  .input-block{
+    // margin-top: 20px;
+    // margin-bottom: 20px;
+    // .form-control{
+    //   @include input;
+    //   margin-top: 8px!important;
+    // }
+    .react-tel-input .flag-dropdown{
+      margin-top: 8px;
+      border-right: none;
+      background-color: transparent;
+      border-radius: 10px 0 0 10px;
+    }
+  }
+  
+}
+
+.Sign-Up,.Experience,.Qualifications{
+  .welcome{
+    .ant-btn{
+      font-family: "SF Pro Display Semi Bold";
+      background-color: $neutralColor5;
+      border: none;
+      color: $primaryColor1;
+      @include button($height: 41px, $border-radius: 6px);
+      span{
+        font-size: 16px;
+        
+      }
+    }
+  }
+  .sign-up-btn{
+    font-family: "SF Pro Display Semi Bold";
+    background-color: $primaryColor1;
+    border-color: $primaryColor1;
+    margin-bottom: 24px;
+    @include button;
+    span{
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+}
+.add-another-btn{
+  font-family: "SF Pro Display Semi Bold";
+    background-color: transparent;
+    border-color: $primaryColor2;
+    
+    margin-top: 20px;
+    margin-bottom: 36px;
+    @include button;
+    span{
+      font-size: 18px;
+      color: $primaryColor2;
+    }
+}
+.add-another-btn:hover,.add-another-btn:focus{
+  background-color: transparent;
+  border-color: $primaryColor2;
+  opacity: .9;
+}
+.neutral-btn-5{
+  margin-bottom: 12px;
+}
+.input-block {
+  .ant-select{
+    width: 100%;
+    font-family: "SF Pro Display";
+  }
+}
+.ant-select-single.ant-select-show-arrow .ant-select-selection-item{
+  font-size: 17px;
+}
+.ant-select:not(.ant-select-customize-input) .ant-select-selector{
+  height: 60px;
+  padding: 16px 11px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+.Forget-Password {
+  .resend-otp{
+    border: none;
+    padding: 0;
+    color: $primaryColor1;
+    background-color: transparent;
+  }
+  .resend-otp:hover,
+  .resend-otp:focus{
+    color: $primaryColor1;
+    background-color: transparent;
+  }
+  .resend-otp[disabled],
+  .resend-otp[disabled]{
+    color: rgba(0, 0, 0, 0.25);
+  }
+  .resend-otp[disabled]:hover,
+  .resend-otp[disabled]:focus{
+    color: rgba(0, 0, 0, 0.25);
+  }
+  .otp-input{
+    font-family: "SF Pro Display Bold";
+    width: 64px;
+    @include button($height: 64px, $border-radius:10px);
+    font-size: 28px;
+    text-align: center;
+  }
+  .remaining-time{
+    text-align: center;
+    margin-top: 20px;
+    .ant-statistic{
+      display: inline-block;
+      .ant-statistic-title{
+        margin-bottom: 0;
+        display: inline-block;
+        font-size: 16px;
+      }
+      .ant-statistic-content{
+        font-family: "SF Pro Display";
+        display: inline-block;
+        padding-left: 4px;
+        span{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .otp-btn-section{
+    padding-top: 8px;
+    padding-bottom: 40px;
+
+    .otp-button-container{
+      width: 33.33%;
+      text-align: center;
+      margin-top: 20px;
+      .ant-input{
+        font-family: "SF Pro Display Bold";
+        width: 86px;
+        @include button($height: 86px, $border-radius: 64px);
+        font-size: 25px;
+      }
+      .ant-btn{
+        border: none;
+        padding-top: 28px;
+        img{
+          max-width: 24.86px;
+        }
+      }
+    }
+  }
+}
+
+.Profile {
+  padding-bottom: 30px;
+  .ant-tabs-nav-list {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active {
+    background-color: $primaryColor2;
+    @include button($height: 44px, $border-radius: 22px);
+    padding: 8px 16px;
+    .ant-tabs-tab-btn{
+      color: #fff;
+    }
+  }
+  .ant-tabs-tab + .ant-tabs-tab{
+    margin-left: 0;
+  }
+  .ant-tabs-tab-btn{
+    font-size: 16px;
+  }
+  .ant-tabs-top > .ant-tabs-nav::before,
+  .ant-tabs-ink-bar,
+  .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap::before,
+  .tabs-nav .ant-tabs-nav-wrap::after{
+    display: none;
+  }
+  .profile-container{
+    .profile-img.text-center{
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+    .profile-description{
+      h4{
+        margin-bottom: 0;
+      }
+    }
+    .profile-details{
+      .stats{
+        .ant-col{
+          background-color: $neutralColor5;
+          width: 48%;
+          text-align: center;
+          border-radius: 10px;
+          padding: 16px 0;
+          margin-bottom: 12px;
+        }
+        p{
+          font-size: 24px;
+          font-weight: 500;
+          margin-bottom: 0;
+        }
+      } 
+      .location {
+        margin-top: 8px;
+        margin-bottom: 16px;
+        img{
+          margin-right: 4px;
+        }
+      }
+      .about-me{
+        a{
+          color: $primaryColor2;
+        }
+      }
+      .work-experience{
+        a{
+          text-decoration: underline;
+          color: var(--hc);
+        }
+      }
+      h4,h5{
+        margin-bottom: 0;
+      }
+      p{
+        margin-bottom: 8px;
+      }
+      a{
+        font-family: "SF Pro Display Bold";
+        font-size: 16px;
+      }
+      .education{
+        p{
+          margin-bottom: 0;
+        }
+      }
+    }
+    .work-details{
+      .work-list{
+        .location{
+          padding-left: 4px;
+          h6{
+            margin-bottom: 0;
+          }
+          p{
+            font-size: 14px;
+            margin-bottom: 8px;
+            img{
+              margin-right: 4px;
+            }
+          }
+        }
+        .ant-col-5{
+          .ant-btn{
+            @include button($height: 33px, $border-radius: 22px);
+            background-color: $neutralColor5;
+            border: none;
+            span{
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      
+
+      .earning-details{
+        h4{
+          margin-bottom: 0;
+        }
+      }
+      .average-rating{
+        margin-top: 8px;
+        margin-bottom: 8px;
+        img{
+          width: 14px;
+          margin-right: 2px;
+        }
+        small{
+          margin-left: 8px;
+        }
+      }
+      .feedback{
+        font-weight: 300;
+      }
+
+    }
+    .work-details{
+      .work-list{
+        .location{
+          padding-left: 4px;
+          h6{
+            margin-bottom: 0;
+          }
+          p{
+            font-size: 14px;
+            margin-bottom: 8px;
+            img{
+              margin-right: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.Payslip{
+  padding-bottom: 100px;
+  .payroll-details{
+    margin-top: 24px;
+  }
+  .dotted-line{
+    .ant-col-24{
+      margin: 0 8px;
+    }
+    .circle{
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+    .circle-left{
+      margin-left: -26px;
+    }
+    .circle-right{
+      margin-right: -26px;
+    }
+  }
+  .view-download{
+    margin-top: 8px;
+    .ant-btn{
+      height: 47px;
+      border-radius: 9px;
+      border: none;
+      background-color: $primaryColor1;
+      span{
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+    .ant-btn.download{
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+}
+.payroll-details{
+  .payroll-list{
+    .location{
+      padding-left: 4px;
+      h6{
+        margin-bottom: 0;
+      }
+      p{
+        font-size: 14px;
+        margin-bottom: 8px;
+        img{
+          margin-right: 4px;
+        }
+      }
+    }
+    margin-bottom: 15px;
+    background-color: $neutralColor5;
+    padding: 20px;
+    border-radius: 12px;
+    .charge-details{
+      margin-top: 16px;
+      p,h6{
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+.Time-Tracking{
+  padding-bottom: 110px;
+  .time-sheets{
+    margin-top: 16px;
+    .time-sheet-list{
+      margin-bottom: 10px;
+      .attendance-time-table{
+        background-color: $neutralColor5;
+        border-radius: 12px;
+      }
+    }
+  }
+  .preview,.live{
+    display: block;
+    text-align: center;
+    .ant-progress-inner{
+      background-color: $primaryColor2;
+    }
+    .ant-progress-circle-path{
+      stroke: #F4F5F6!important;
+    }
+    .ant-progress-text{
+      display: block;
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+  .live{
+    .ant-progress-inner{
+      background-color: #000;
+    }
+    .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path{
+      stroke: $primaryColor2!important;
+    }
+    .ant-progress-text{
+      span{
+        color: #fff;
+      }
+    }
+  }
+}
+
+.attendance-time-table{
+  padding: 16px;
+  background-color: $neutralColor4;
+  border-radius: 0 0 12px 12px;
+  .ant-row{
+    margin-top: 8px;
+    h6{
+      margin-bottom: 0;
+    }
+    img{
+      width: 12px;
+      margin-right: 4px;
+    }
+  }
+}
+
+.Settings{
+  padding-bottom: 24px;
+  .list {
+    margin-top: 16px;
+    img{
+      width: 24px;
+    }
+    p{
+      margin-bottom: 0;
+    }
+    p.title{
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
+
+.Pending-Attendance,.Job-Review{
+  .attendance-section{
+    margin-top: 24px;
+    .attendance-list{
+      margin-bottom: 20px;
+      background-color: $neutralColor5;
+      border-radius: 12px;
+      .attendance-user-details{
+        padding: 16px;
+        .ant-btn{
+          @include button($height: 33px, $border-radius: 22px);
+          background-color: #fff;
+          border: none;
+          span{
+            font-size: 12px;
+          }
+        }
+      }
+      
+    }
+    .portrait-container{
+      margin-bottom: 12px;
+      .ant-col-19{
+        padding-left: 8px;
+        h4{
+          margin-bottom: 0;
+        }
+        p{
+          margin-bottom: 0;
+        }
+      }
+      
+    }
+    padding-bottom: 30px;
+    .location{
+      h4{
+        margin-bottom: 0;
+      }
+      p{
+        font-size: 14px;
+        margin-bottom: 8px;
+        img{
+          margin-right: 4px;
+        }
+      }
+    }
+
+  }
+}
+.Job-Review{
+  padding-bottom: 30px;
+  .employee-summary{
+    .ant-btn{
+      @include button($height: 41px, $border-radius: 22px);
+      background-color: $neutralColor5;
+      border: none;
+      img{
+        margin-right: 4px;
+      }
+    }
+  }
+  .confirm-revision{
+    padding-top: 180px;
+    .ant-btn{
+      @include button($height: 62px, $border-radius: 10px);
+      border: none;
+      span{
+        font-size: 18px;
+        font-family: "SF Pro Display Bold";
+        color: #fff;
+      }
+      @media (max-width: 394px){
+        span{
+          font-size: 15px;
+        }
+      }
+    }
+    .revision{
+      background-color: $primaryColor2;
+    }
+    .confirm{
+      background-color: $primaryColor1;
+    }
+    
+  }
+  .feedback {
+    position: fixed;
+    inset: 0;
+    top: 100%;
+    overflow: hidden;
+    transition: all 500ms ease;
+    .back-shadow{
+      background: rgba(0 ,0 ,0, 0.5);
+      position: absolute;
+      inset: 0;
+    }
+    .feedback-box{
+      background-color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 22px 22px 0 0;
+      height: 0;
+      overflow: hidden;
+      transition: all 300ms ease;
+      .line{
+        margin-bottom: 8px;
+      }
+      .ant-btn{
+        @include button($height: 62px, $border-radius: 10px);
+        background-color: $primaryColor1;
+        span{
+          font-size: 18px;
+          color: #fff;
+        }
+
+      }
+    }
+  }
+  .feedback.open{
+    top: 0;
+    transition: all 500ms ease;
+    .feedback-box{
+      height: 420px;
+      transition: all 500ms ease;
+      padding: 15px;
+    }
+  }
+}
+
+hr{
+  margin: 16px -15px;
+  height: 1px;
+  background-color: $neutralColor5;
+  border: none;
+}
+
+div.input-block{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .form-control{
+    @include input;
+    margin-top: 8px!important;
+  }
+}
+.ant-progress-bg,
+.ant-progress-status-success .ant-progress-bg{
+  background-color: $primaryColor2;
+}
+.ant-progress-show-info .ant-progress-outer{
+  padding-right: 0;
+}
+.ant-progress-text{
+  display: none;
+}
+
+
+
